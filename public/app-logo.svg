@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- App Icon Squircle Background Gradient -->
+    <linearGradient id="bgGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E824C" />
+      <stop offset="50%" stop-color="#116136" />
+      <stop offset="100%" stop-color="#063B1F" />
+    </linearGradient>
+
+    <!-- Back Pocket Flaps -->
+    <linearGradient id="mintFlap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A8DFC0" />
+      <stop offset="100%" stop-color="#87C5A4" />
+    </linearGradient>
+
+    <!-- Coin Gradients -->
+    <linearGradient id="coinOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE047" />
+      <stop offset="50%" stop-color="#FACC15" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+    <linearGradient id="coinInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="35%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- White Pocket Gradient -->
+    <linearGradient id="whitePocket" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDFCF7" />
+      <stop offset="85%" stop-color="#F7F5EC" />
+      <stop offset="100%" stop-color="#EAE6D7" />
+    </linearGradient>
+
+    <!-- Green Mosque & Stripe Gradient -->
+    <linearGradient id="mosqueGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#158046" />
+      <stop offset="100%" stop-color="#0B5D30" />
+    </linearGradient>
+
+    <!-- Soft Shadows -->
+    <filter id="pocketShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#032211" flood-opacity="0.4" />
+    </filter>
+    <filter id="coinShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#052E16" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Rounded Square App Icon Base -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGreen)" />
+
+  <!-- Top Sparkle Rays -->
+  <g stroke="#FDD226" stroke-width="14" stroke-linecap="round">
+    <line x1="256" y1="64" x2="256" y2="98" />
+    <line x1="184" y1="84" x2="206" y2="108" />
+    <line x1="328" y1="84" x2="306" y2="108" />
+  </g>
+
+  <!-- Back Mint Flaps -->
+  <path d="M 102 198 L 102 172 Q 102 152 122 152 L 195 166 L 195 220 Z" fill="url(#mintFlap)" />
+  <path d="M 410 198 L 410 172 Q 410 152 390 152 L 317 166 L 317 220 Z" fill="url(#mintFlap)" />
+
+  <!-- Dark Green Wallet Interior -->
+  <path d="M 96 204 Q 256 144 416 204 L 416 260 L 96 260 Z" fill="#084727" />
+
+  <!-- Golden Rupiah Coin -->
+  <g filter="url(#coinShadow)">
+    <circle cx="256" cy="202" r="84" fill="url(#coinOuter)" />
+    <circle cx="256" cy="202" r="66" fill="url(#coinInner)" stroke="#D97706" stroke-width="3" />
+    <text
+      x="256"
+      y="224"
+      font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif"
+      font-size="68"
+      font-weight="900"
+      fill="#9A4E06"
+      text-anchor="middle"
+      letter-spacing="-2"
+    >Rp</text>
+  </g>
+
+  <!-- White Front Shield Pocket -->
+  <g filter="url(#pocketShadow)">
+    <path
+      d="M 78 214
+         Q 78 188 105 198
+         L 244 252
+         Q 256 257 268 252
+         L 407 198
+         Q 434 188 434 214
+         L 434 342
+         Q 434 404 374 428
+         L 274 462
+         Q 256 468 238 462
+         L 138 428
+         Q 78 404 78 342
+         Z"
+      fill="url(#whitePocket)"
+    />
+
+    <!-- Green V-Stripe Along Pocket Top -->
+    <path
+      d="M 78 218 L 244 282 Q 256 287 268 282 L 434 218 L 434 236 L 268 300 Q 256 305 244 300 L 78 236 Z"
+      fill="url(#mosqueGreen)"
+    />
+
+    <!-- Mosque Emblem on Front Pocket -->
+    <!-- Crescent Moon -->
+    <path
+      d="M 252 292
+         A 15 15 0 1 0 272 312
+         A 12 12 0 1 1 252 292 Z"
+      fill="#158046"
+    />
+
+    <!-- Mosque Dome & Base Silhouette -->
+    <path
+      d="M 256 322
+         C 242 332 212 344 212 368
+         C 212 375 215 380 218 383
+         L 208 383
+         Q 202 383 202 389
+         L 202 424
+         L 234 432
+         L 234 398
+         Q 234 380 256 368
+         Q 278 380 278 398
+         L 278 432
+         L 310 424
+         L 310 389
+         Q 310 383 304 383
+         L 294 383
+         C 297 380 300 375 300 368
+         C 300 344 270 332 256 322 Z"
+      fill="url(#mosqueGreen)"
+    />
+
+    <!-- Inner Arch Door -->
+    <path
+      d="M 244 435
+         L 244 402
+         Q 244 388 256 380
+         Q 268 388 268 402
+         L 268 435
+         L 256 439 Z"
+      fill="url(#mosqueGreen)"
+    />
+  </g>
+</svg>

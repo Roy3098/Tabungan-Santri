@@ -1,0 +1,8 @@
+{
+  "name": "Tabungan Santri",
+  "description": "Sistem pengelolaan buku tabungan, setoran, penarikan, dan laporan saldo santri Rumah Tahfidz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

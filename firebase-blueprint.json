@@ -1,0 +1,101 @@
+{
+  "entities": {
+    "Settings": {
+      "title": "Settings",
+      "description": "App settings for institution and officer",
+      "type": "object",
+      "properties": {
+        "lembaga": { "type": "string" },
+        "petugas": { "type": "string" },
+        "logo": { "type": "string" }
+      },
+      "required": ["lembaga", "petugas"]
+    },
+    "Kelas": {
+      "title": "Kelas",
+      "description": "Class or halaqah group",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nama": { "type": "string" },
+        "wali_kelas": { "type": "string" },
+        "keterangan": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "nama"]
+    },
+    "Santri": {
+      "title": "Santri",
+      "description": "Student in tahfidz institution",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nis": { "type": "string" },
+        "nama": { "type": "string" },
+        "kelas": { "type": "string" },
+        "status": { "type": "string", "enum": ["aktif", "nonaktif"] },
+        "wali_santri": { "type": "string" },
+        "no_hp": { "type": "string" },
+        "alamat": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "nis", "nama", "kelas", "status"]
+    },
+    "Transaksi": {
+      "title": "Transaksi",
+      "description": "Deposit or withdrawal transaction record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "no_ref": { "type": "string" },
+        "tanggal": { "type": "string" },
+        "id_santri": { "type": "string" },
+        "jenis": { "type": "string", "enum": ["setoran", "penarikan"] },
+        "nominal": { "type": "number" },
+        "keterangan": { "type": "string" },
+        "petugas": { "type": "string" },
+        "saldo_setelah": { "type": "number" },
+        "status": { "type": "string", "enum": ["valid", "void"] },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "no_ref", "tanggal", "id_santri", "jenis", "nominal", "status"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Admin and officer user profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nama": { "type": "string" },
+        "email": { "type": "string" },
+        "password": { "type": "string" },
+        "jabatan": { "type": "string" },
+        "no_hp": { "type": "string" },
+        "foto_profil": { "type": "string" }
+      },
+      "required": ["nama", "email"]
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": "Settings",
+      "description": "Configuration settings"
+    },
+    "/kelas/{kelasId}": {
+      "schema": "Kelas",
+      "description": "Classes and halaqah"
+    },
+    "/santri/{santriId}": {
+      "schema": "Santri",
+      "description": "Students list"
+    },
+    "/transaksi/{transaksiId}": {
+      "schema": "Transaksi",
+      "description": "Financial savings transactions"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    }
+  }
+}
